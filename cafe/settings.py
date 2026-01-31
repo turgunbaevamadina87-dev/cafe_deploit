@@ -40,6 +40,22 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'menu',
 ]
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],  # можно добавить путь к своим шаблонам
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',   # добавить
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 
 # -----------------------------
 # MIDDLEWARE
